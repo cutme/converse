@@ -1,0 +1,9 @@
+h1, h2 {
+	font-size: em(44);
+	margin-bottom: 1.4em;
+	font-size: em(44);
+	
+	@media screen and ( max-width: 768px ) {
+		font-size: em(36);
+	}
+}

@@ -1,0 +1,41 @@
+.c-models {
+	max-width: 520px;
+	margin: 0 auto 45px auto;
+	
+	&__name {
+		@include opacity(0);
+		@include hover;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		font-size: em(16);
+		line-height: 1;
+	}
+	
+	&__item {
+		float: left;
+		width: 260px;
+		border-bottom: 4px solid $gray--dark;
+		padding: 50px 15px 10px 15px;
+		-webkit-backface-visibility: hidden;
+	    -moz-backface-visibility: hidden;
+	    -webkit-transform: translate3d(0, 0, 0);
+	    -moz-transform: translate3d(0, 0, 0);
+		
+		&.is-active,
+		&:hover {			
+			.c-models__name {
+				@include opacity(1);
+			}
+		}
+		
+		&:hover {
+			border-bottom-color: darken($green, 30%);
+		}	
+		
+		&.is-active {
+			border-bottom-color: $green;
+		}
+	}
+}

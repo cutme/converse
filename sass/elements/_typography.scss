@@ -1,0 +1,25 @@
+@include font-face-db( "icomoon", "icomoon");
+@include font-face-db( "MonotypeRockwellMT", "MonotypeRockwellMT");
+@include selection(white, $green);
+
+body {
+	@include antialias;
+	line-height: 1.65;
+	font: {
+		family: $text;
+		size: #{$base-font-size}px;
+		weight: normal;
+	}
+	color: white;
+}
+
+a { 
+	@include hover;
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+.color-green {
+	color: $green;
+}

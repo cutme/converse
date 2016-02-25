@@ -1,0 +1,43 @@
+#fp-nav {
+	right: 4vw !important;
+	
+	ul {
+		right: 50px;
+		
+		li {
+			width: 30px !important;
+		    height: 30px !important;
+		    margin: 0 0 20px 0 !important;
+		    
+			a {
+				@include border-radius(50%);
+				border: 1px solid transparent;
+				margin: 0 !important;
+				line-height: 20px;
+				text-align: center;
+		
+				span {
+					position: relative !important;
+				    top: auto !important;
+					left: auto !important;
+					display: inline-block;
+					background-color: white !important;
+					width: 10px !important;
+					height: 10px !important;
+					border: none !important;
+					margin: 0 !important;
+				}
+				
+				&.active {
+					background-color: rgba($green, .2);
+					border-color: $green;
+		
+					span {
+						background-color: $green !important;
+						margin: 0 !important;
+					}
+				}
+			}
+		}
+	}
+}

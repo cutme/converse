@@ -1,0 +1,20 @@
+.c-direction {
+	z-index: 10;
+	display: inline-block;
+	text-align: center;
+	
+	&__title {
+		display: inline-block;
+	}
+
+	[class^="icon-"] {
+		display: block;
+		font-size: em(90);
+		line-height: 40px;
+		color: $green;
+	}
+	
+	&:hover {
+		color: $green;
+	}
+}

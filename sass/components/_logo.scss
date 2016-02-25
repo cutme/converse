@@ -1,0 +1,13 @@
+.c-logo {
+	position: absolute;
+	left: 50px; top: 50px; z-index: 10;
+	width: grid(300);
+	
+	@media screen and ( min-width: 1321px ) {
+		left: 0;
+	}
+
+	@media screen and ( max-width: 768px ) {
+		width: grid(300, 768);
+	}
+}

@@ -1,0 +1,33 @@
+[class^="icon-"], [class*=" icon-"] {
+	@include icomoon;
+}
+
+.icon-angle-right:before {
+    content: "\e905";
+}
+.icon-angle-left:before {
+    content: "\e906";
+}
+.icon-angle-up:before {
+    content: "\e907";
+}
+.icon-angle-down:before {
+    content: "\e908";
+}
+.icon-play:before {
+    content: "\e904";
+}
+.icon-chevron-left:before {
+    content: "\e900";
+}
+.icon-chevron-right:before {
+    content: "\e901";
+}
+.icon-chevron-up:before {
+    content: "\e902";
+}
+.icon-chevron-down:before {
+    content: "\e903";
+}
+
+
