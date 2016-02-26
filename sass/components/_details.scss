@@ -1,7 +1,6 @@
 .c-details {
 	position: relative;
 	overflow: hidden;
-//	height: 100%;
 	
 	&__fade {
 		position: absolute; top: 0; z-index: 10;
@@ -42,12 +41,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
 			}
 		}
-	}	
+	}
 	
 	&__item {
 		position: relative;
 		max-width: 800px;
-		padding: 100px 40px 0 40px;
+		padding: 0 100px 0 100px;
 		-webkit-backface-visibility: hidden;
 		-moz-backface-visibility: hidden;
 		-webkit-transform: translate3d(0, 0, 0);
@@ -64,12 +63,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		@include transition-duration(1000ms);
 		position: absolute;
 		left: 0;
-		top: 40px;
+		top: 0;
 		z-index: 10;
 		width: 100%;
 		text-align: center;
-		//font-size: 1.56vw; //em(30);
-		//font-size: em(30);
 		line-height: 1;
 		color: $green;
 		
@@ -81,7 +78,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 	&__text {
 		display: block;
 		margin-bottom: 40px;
-		//font-size: 1.56vw; //em(30);
 		font-size: em(30);
 		line-height: 1;
 		color: $green;
@@ -104,9 +100,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 			height: 130px;
 		}
     }
-    
-    
-	
+   	
 	&__dot {
 		@include border-radius(50%);
 		@include hover;
@@ -142,6 +136,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 			left: 50%;
 		    margin-left: -660px;
 		}
+		
+		@media screen and ( max-width: 1023px ) {
+		 	left: 40px;
+	    }
 
 		.owl-next {		
 			right: 0;
@@ -149,13 +147,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 			@media screen and ( max-width: 1550px ) {
 				right: 100px;
 			}
-			
-			@media screen and ( max-width: 1320px ) {
-				right: 15%;
-			}
-			
-			@media screen and ( max-width: 768px ) {
-			 	right: 3%;
+
+			@media screen and ( max-width: 1023px ) {
+			 	right: 40px;
 		    }
 		}
 
@@ -165,13 +159,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 			@media screen and ( max-width: 1550px ) {
 				left: 100px;
 			}
-			
-			@media screen and ( max-width: 1320px ) {
-				left: 15%;
-			}
-			
-			@media screen and ( max-width: 768px ) {
-			 	left: 3%;
+
+			@media screen and ( max-width: 1023px ) {
+			 	left: 40px;
 		    }
 		}
 	}
@@ -187,7 +177,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		
 		.c-details__item--wkladka {
 			.c-details__line {
-				height: 230px;
+				height: 275px;
 			}
 		}
 		

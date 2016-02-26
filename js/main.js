@@ -23,7 +23,7 @@ jQuery(function($) {
 				afterRender: function() {
 					e.show();
 
-					$('.c-start__image').fadeIn(4000, function() {
+					$('.c-start__image').fadeIn(3000, function() {
 						$('.c-logo').fadeIn(2000, function() {
 							$('.js-buy').fadeIn(3000);
 							$('#fp-nav').fadeIn(3000);
@@ -70,7 +70,7 @@ jQuery(function($) {
 		        paddingTop: '50px',
 		        paddingBottom: '50px',
 				responsiveWidth: 760,
-				responsiveHeight: 867,
+				responsiveHeight: 1024,
 		        scrollOverflow: true
 			});
 			

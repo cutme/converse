@@ -22,9 +22,9 @@
 				position: center;
 			}
 			
-			@media screen and ( max-height: 740px ) {
-				height: 440px;
-			}
+			//@media screen and ( max-height: 767px ) {
+				//height: 440px;
+			//}
 		}
 		
 		@media screen and ( max-width: 768px ) {
@@ -63,7 +63,7 @@
 	.o-btn {
 		display: none;
 		position: absolute;
-		top: 34vh;		 // 375px
+		top: 30vh;		 // 375px
 		left: grid(130); // 130px
 	    
 		@media screen and ( max-width: 1023px ) {
