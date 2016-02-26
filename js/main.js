@@ -133,7 +133,6 @@ jQuery(function($) {
 			});
 			
 			owl.owlCarousel({
-				autoWidth: true,
 				center: true,
 				dots: true,
 				items: 1,

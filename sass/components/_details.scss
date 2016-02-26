@@ -39,11 +39,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
 			}
 		}
+		
+		@media screen and ( max-width: 480px ) {
+			display: none;
+		}
 	}
 	
 	&__item {
 		position: relative;
 		max-width: 800px;
+		margin: 0 auto;
 		padding: 0 100px 0 100px;
 		-webkit-backface-visibility: hidden;
 		-moz-backface-visibility: hidden;
@@ -52,6 +57,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		
 		@media screen and ( max-width: 768px ) {
 			max-width: 586px;
+			padding: 0;
 		}
 	}
 
@@ -81,8 +87,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		color: $green;
 		
 		@media screen and ( max-width: 768px ) {
-			padding: 0 30px;
+			//padding: 0 30px;
 			font-size: em(21);
+		}
+		
+		@media screen and ( max-width: 420px ) {
+			font-size: em(16);
+			//padding: 0 60px;
 		}
 	}
 	
@@ -98,7 +109,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 			height: 130px;
 		}
     }
-   	
+    
+    .owl-dots {
+    	bottom: 0 !important;
+    }
+
 	&__dot {
 		@include border-radius(50%);
 		@include hover;
@@ -173,7 +188,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 			height: 130px;
 			
 			@media screen and ( max-width: 768px ) {
-				height: 70px;
+				height: 100px;
 			}
 		}
 		
@@ -181,8 +196,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 			.c-details__line {
 				height: 275px;
 				
-				@media screen and ( max-width: 768px ) {
-					height: 150px;
+				@media screen and ( max-width: 480px ) {
+					height: 200px;
+				}
+				
+				@media screen and ( max-width: 420px ) {
+					height: 120px;
 				}
 
 			}
@@ -192,8 +211,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 			.c-details__line {
 				height: 230px;
 				
-				@media screen and ( max-width: 768px ) {
-					height: 180px;
+				@media screen and ( max-width: 480px ) {
+					height: 200px;
+				}
+				
+				@media screen and ( max-width: 420px ) {
+					height: 150px;
 				}
 			}
 		}
