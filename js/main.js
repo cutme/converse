@@ -71,11 +71,12 @@ jQuery(function($) {
 		        paddingBottom: '50px',
 				responsiveWidth: 760,
 				responsiveHeight: 840,
-		        scrollOverflow: true
+		        scrollOverflow: true,
+		        normalScrollElements: '.c-offer'
 			});
 			
 			if ( $('html').hasClass('mobile') ) {
-				$.fn.fullpage.setAllowScrolling(false);
+				$.fn.fullpage.setAutoScrolling(false);
 			}
 			
 			$('.js-next-section').on('click', function(e) {
