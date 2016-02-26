@@ -24,7 +24,7 @@ jQuery(function($) {
 					e.show();
 
 					$('.c-start__image').fadeIn(4000, function() {
-						$('.c-logo').fadeIn(3000, function() {
+						$('.c-logo').fadeIn(2000, function() {
 							$('.js-buy').fadeIn(3000);
 							$('#fp-nav').fadeIn(3000);
 							
