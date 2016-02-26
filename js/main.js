@@ -70,7 +70,7 @@ jQuery(function($) {
 		        paddingTop: '50px',
 		        paddingBottom: '50px',
 				responsiveWidth: 760,
-				responsiveHeight: 767,
+				responsiveHeight: 867,
 		        scrollOverflow: true
 			});
 			
