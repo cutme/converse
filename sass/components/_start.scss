@@ -1,11 +1,15 @@
 .c-start {
 
 	&__image {
-		
+		display: none;
 		position: relative; z-index: 5;
 		width: grid(980);
 		height: 100%;
 		margin: 0 auto;
+		
+		@media screen and ( max-width: 480px ) {
+			width: 100%;
+		}
 		
 		i {
 			@include background-size(contain); 
@@ -17,23 +21,42 @@
 				repeat: no-repeat;
 				position: center;
 			}
+			
+			@media screen and ( max-height: 740px ) {
+				height: 440px;
+			}
 		}
 		
 		@media screen and ( max-width: 768px ) {
 			padding-top: 40px;
 		}
+		
+		@media screen and ( max-width: 480px ) {
+			padding-top: 185px;
+		}
 	}
 
 	.c-direction {
 		@include scut-center-transform(x);
-		bottom: 40px;
+		display: none;
+		bottom: 0;
 		
 		&__title {
 			margin-bottom: 20px;
 		}
 		
 		&:hover {
-			bottom: 35px;
+			@media screen and ( min-width: 481px ) {
+				.no-mobile & {
+					bottom: 35px;
+				}
+			}
+		}
+		
+		@media screen and ( max-width: 480px ) {
+			//display: block;
+			//bottom: auto;
+			//margin: 0 auto;
 		}
 	}
 	
@@ -44,7 +67,13 @@
 		left: grid(130); // 130px
 	    
 		@media screen and ( max-width: 1023px ) {
-		    top: 75px; left: auto; right: 50px;
+		    top: 0; left: auto; right: 50px;
+	    }
+	    
+	    @media screen and ( max-width: 480px ) {
+	    	@include scut-center-transform(x);
+	    	right: auto;
+	    	top: 140px;
 	    }
 	}
 }

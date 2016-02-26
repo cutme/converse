@@ -1,7 +1,7 @@
 .c-details {
-	//height: 600px;
 	position: relative;
-	height: 100%;
+	overflow: hidden;
+//	height: 100%;
 	
 	&__fade {
 		position: absolute; top: 0; z-index: 10;
@@ -46,11 +46,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 	
 	&__item {
 		position: relative;
-		padding: 100px 0 0 0;
+		max-width: 800px;
+		padding: 100px 40px 0 40px;
 		-webkit-backface-visibility: hidden;
 		-moz-backface-visibility: hidden;
 		-webkit-transform: translate3d(0, 0, 0);
 		-moz-transform: translate3d(0, 0, 0);
+		
+		@media screen and ( max-width: 767px ) {
+			max-width: 586px;
+		}
 	}
 
 	&__caption {
@@ -67,6 +72,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		//font-size: em(30);
 		line-height: 1;
 		color: $green;
+		
+		@media screen and ( max-width: 600px ) {
+			@include opacity(1);
+		}
 	}
 
 	&__text {
@@ -76,6 +85,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		font-size: em(30);
 		line-height: 1;
 		color: $green;
+		
+		@media screen and ( max-width: 767px ) {
+			padding: 0 30px;
+			font-size: em(21);
+		}
 	}
 	
 	&__line {
@@ -85,7 +99,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 	    width: 1px; height: 0;
 	    background-color: $green;
 	    margin-bottom: -3px;
+	    
+	    @media screen and ( max-width: 600px ) {
+			height: 130px;
+		}
     }
+    
+    
 	
 	&__dot {
 		@include border-radius(50%);
@@ -115,7 +135,47 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 	.owl-carousel {
 		z-index: 5;
 	}
-	
+
+	.owl-nav {
+		@media screen and ( min-width: 1321px ) {
+			width: 1320px;
+			left: 50%;
+		    margin-left: -660px;
+		}
+
+		.owl-next {		
+			right: 0;
+			
+			@media screen and ( max-width: 1550px ) {
+				right: 100px;
+			}
+			
+			@media screen and ( max-width: 1320px ) {
+				right: 15%;
+			}
+			
+			@media screen and ( max-width: 768px ) {
+			 	right: 3%;
+		    }
+		}
+
+		.owl-prev {
+			left: 0;
+			
+			@media screen and ( max-width: 1550px ) {
+				left: 100px;
+			}
+			
+			@media screen and ( max-width: 1320px ) {
+				left: 15%;
+			}
+			
+			@media screen and ( max-width: 768px ) {
+			 	left: 3%;
+		    }
+		}
+	}
+
 	.active.center {
 		.c-details__caption {
 			@include opacity(1);
@@ -125,11 +185,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 			height: 130px;
 		}
 		
+		.c-details__item--wkladka {
+			.c-details__line {
+				height: 230px;
+			}
+		}
+		
+		.c-details__item--plotno {
+			.c-details__line {
+				height: 230px;
+			}
+		}
+		
 		.c-details__dot {
 			@include transform(scale(1));
-		}
-
-		
-		
+		}		
 	}
 }

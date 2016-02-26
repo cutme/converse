@@ -4,7 +4,7 @@
 @import "settings/colors";
 @import "settings/global";
 
-@import "tools/animations";
+//@import "tools/animations";
 @import "tools/clear";
 @import "tools/functions";
 @import "tools/mixins";
@@ -31,7 +31,10 @@
 @import "components/offer";
 @import "components/start";
 @import "components/types";
+@import "components/types__full";
+@import "components/types__thumbs";
 @import "components/video";
 
 @import "trumps/trumps";
 @import "trumps/trumps.fp";
+@import "trumps/trumps.owl";

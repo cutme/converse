@@ -1,0 +1,79 @@
+.c-types__full {
+	position: relative;
+	
+	@media screen and ( min-width: 1024px ) {	
+		float: right;
+		width: grid(1092);
+	}
+	
+	.o-btn {
+	    position: absolute; right: 0; top: 20px; z-index: 10;
+	    
+	    @media screen and ( min-width: 1024px ) {	
+	    	right: grid(220, 1092);
+	    }
+	    
+	    @media screen and ( max-width: 480px ) {
+	    	position: relative;
+	    	right: auto; top: auto;
+	    	display: block;
+	    	width: 170px;
+	    	margin: 0 auto;
+	    }
+    }
+
+	.c-types__item {
+		display: none;
+		
+	}
+
+	.c-types__photo {
+		background: {
+			image: url(../img/ripple.svg);
+			repeat: no-repeat;
+			position: center;
+		}
+		margin: 0 auto;
+		-webkit-backface-visibility: hidden;
+	    -moz-backface-visibility: hidden;
+	    -webkit-transform: translate3d(0, 0, 0);
+	    -moz-transform: translate3d(0, 0, 0);
+	    
+	    @media screen and ( min-width: 1024px ) {	
+	    	width: grid(824, 1092);
+	    }
+	    
+		@media screen and ( max-width: 1023px ) {
+	    	width: auto;
+	    	max-width: 586px;
+	    	margin-bottom: 40px;
+	    	padding-top: 80px;
+	    }
+	    
+	    @media screen and ( max-width: 480px ) {
+	    	max-width: 340px;
+	    	padding-top: 20px;
+	    }    
+	}
+
+	.owl-nav {
+		.owl-next {		
+			right: 70px;
+			
+			@media screen and ( max-width: 1023px ) {
+				right: 0;
+			}	
+
+		}
+
+		.owl-prev {
+			left: 70px;
+			
+			@media screen and ( max-width: 1023px ) {
+				left: 0;
+			}
+		}
+	}
+}
+
+

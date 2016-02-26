@@ -1,6 +1,7 @@
 .c-logo {
+	display: none;
 	position: absolute;
-	left: 50px; top: 50px; z-index: 10;
+	left: 50px; top: 0; z-index: 10;
 	width: grid(300);
 	
 	@media screen and ( min-width: 1321px ) {
@@ -9,5 +10,10 @@
 
 	@media screen and ( max-width: 768px ) {
 		width: grid(300, 768);
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		@include scut-center-transform(x);
+		width: 240px;
 	}
 }

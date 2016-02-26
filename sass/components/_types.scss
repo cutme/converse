@@ -1,34 +1,18 @@
 .c-types {
 	display: none;
+/*
 
 	&.is-active {
 		display: block;
 	}
+*/
 	
-	&__item {
-		@include hover;
-		display: block;
-		position: relative; z-index: 5;
-		border: 1px solid $gray--light;
-		padding: 5px 15px;
-		
-		&:hover {
-			border-color: darken($green, 30%);
-		}
-		
-		&.is-active {
-			z-index: 10;
-			border-color: $green;margin-top: -1px;
-			color: black;
-			
-			& + li {
-				margin-top: -1px;
-			}
-		}
+	&__photo {
+		position: relative;
 	}
 	
-	&__thumbs {
-		float: left;
-		width: 228px;
+	&__size {
+		display: none;
 	}
 }
+

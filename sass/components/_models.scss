@@ -1,6 +1,15 @@
 .c-models {
-	max-width: 520px;
+	width: grid(520);
 	margin: 0 auto 45px auto;
+	
+	@media screen and ( max-width: 1023px ) {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		margin-bottom: 40px;
+	}
 	
 	&__name {
 		@include opacity(0);
@@ -11,17 +20,28 @@
 		width: 100%;
 		font-size: em(16);
 		line-height: 1;
+		
+		@media screen and ( max-width: 768px ) {
+			padding: 0 10px;
+		}
+		
 	}
 	
 	&__item {
-		float: left;
-		width: 260px;
-		border-bottom: 4px solid $gray--dark;
-		padding: 50px 15px 10px 15px;
+		float: left;		
+		padding: 50px grid(15, 260) 10px grid(15, 260);
 		-webkit-backface-visibility: hidden;
 	    -moz-backface-visibility: hidden;
 	    -webkit-transform: translate3d(0, 0, 0);
 	    -moz-transform: translate3d(0, 0, 0);
+	    
+	    @media screen and ( min-width: 481px ) {
+	    	border-bottom: 4px solid $gray--dark;
+	    }
+	    
+	    @media screen and ( max-width: 480px ) {
+	    	@include opacity(.3);
+	    }
 		
 		&.is-active,
 		&:hover {			
@@ -31,11 +51,19 @@
 		}
 		
 		&:hover {
-			border-bottom-color: darken($green, 30%);
+			.no-mobile & {
+				@media screen and ( min-width: 481px ) {
+					border-bottom-color: darken($green, 30%);
+				}
+			}
 		}	
 		
 		&.is-active {
 			border-bottom-color: $green;
+			
+			@media screen and ( max-width: 480px ) {
+				@include opacity(1);
+			}
 		}
 	}
 }

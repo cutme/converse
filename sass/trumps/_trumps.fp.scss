@@ -1,5 +1,10 @@
 #fp-nav {
+	display: none;
 	right: 4vw !important;
+	
+	@media screen and ( max-width: 1023px ) {
+		display: none !important;
+	}
 	
 	ul {
 		right: 50px;

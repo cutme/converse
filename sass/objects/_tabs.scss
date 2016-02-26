@@ -25,6 +25,14 @@
 		}
 	}
 	
+	.o-tabs__item {
+		display: none;
+		
+		&.is-active {
+			display: block;
+		}
+	}
+	
 	&__content {
 		position: relative; z-index: 5;
 	}

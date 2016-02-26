@@ -1,9 +1,23 @@
 .c-about {	
+	@media screen and ( max-width: 480px ) {
+		padding: 0 20px;
+		
+		br {
+			display: none;
+		}
+	}
+	
 	p {
 		margin-bottom: 1.5em;
 		
 		@media screen and ( max-width: 768px ) {
 			font-size: em(21);
 		}
+		
+		@media screen and ( max-width: 480px ) {
+			font-size: em(14);
+		}
 	}
+	
+	
 }

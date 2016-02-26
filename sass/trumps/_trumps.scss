@@ -1,3 +1,7 @@
+.is-active {
+	display: block !important;
+}
+		
 .section {
 	@include background-size(cover);
 	position: relative;
@@ -16,56 +20,4 @@
 
 .u-text-center {
 	text-align: center;
-}
-
-
-.owl-nav {
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	
-	@media screen and ( min-width: 1321px ) {
-		width: 1320px;
-		left: 50%;
-	    margin-left: -660px;
-	}
-	
-	.owl-next,
-	.owl-prev {
-		@include hover;
-		@include scut-center-transform(y);
-		z-index: 20;
-		font-size: 100px;
-		color: rgba(white, .4);
-		
-		&:hover {
-			.no-mobile & {
-				color: $green;
-			}
-		}
-	}
-
-	.owl-next {		
-		right: 0;
-		
-		@media screen and ( max-width: 1550px ) {
-			right: 100px;
-		}
-		
-		@media screen and ( max-width: 1320px ) {
-			right: 15%;
-		}
-	}
-	
-	.owl-prev {
-		left: 0;
-		
-		@media screen and ( max-width: 1550px ) {
-			left: 100px;
-		}
-		
-		@media screen and ( max-width: 1320px ) {
-			left: 15%;
-		}
-	}
 }

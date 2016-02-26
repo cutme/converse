@@ -1,3 +1,13 @@
 .c-offer {
-	
+	.o-wrap {
+		
+		@media screen and ( max-width: 1023px ) {
+			max-width: 686px;
+		}
+		
+		@media screen and ( max-width: 480px ) {
+			max-width: none;
+			width: 100%;
+		}
+	}
 }

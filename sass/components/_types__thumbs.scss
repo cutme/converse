@@ -1,0 +1,42 @@
+.c-types__thumbs {
+
+	@media screen and ( min-width: 1024px ) {	
+		float: left;
+		width: grid(228);
+	}
+	
+	@media screen and ( max-width: 1023px ) {	
+		@include clear;
+	}
+	
+	.c-types__item {
+		@include hover;
+		display: block;
+		position: relative; z-index: 5;
+		border: 1px solid $gray--light;
+		padding: 5px 15px;
+		-webkit-backface-visibility: hidden;
+	    -moz-backface-visibility: hidden;
+	    -webkit-transform: translate3d(0, 0, 0);
+	    -moz-transform: translate3d(0, 0, 0);
+	    
+	    @media screen and ( max-width: 1023px ) {
+	    	float: left;
+			width: grid(341, 1023);
+	    }
+	    
+	    @media screen and ( max-width: 480px ) {
+	    	width: 50%;
+	    }
+		
+		&:hover {
+			border-color: darken($green, 30%);
+		}
+		
+		&.is-active {
+			z-index: 10;
+			border-color: $green;
+			color: black;
+		}
+	}
+}
