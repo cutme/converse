@@ -1,6 +1,4 @@
 .c-details {
-	position: relative;
-	overflow: hidden;
 	
 	&__fade {
 		position: absolute; top: 0; z-index: 10;
@@ -52,7 +50,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		-webkit-transform: translate3d(0, 0, 0);
 		-moz-transform: translate3d(0, 0, 0);
 		
-		@media screen and ( max-width: 767px ) {
+		@media screen and ( max-width: 768px ) {
 			max-width: 586px;
 		}
 	}
@@ -82,7 +80,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		line-height: 1;
 		color: $green;
 		
-		@media screen and ( max-width: 767px ) {
+		@media screen and ( max-width: 768px ) {
 			padding: 0 30px;
 			font-size: em(21);
 		}
@@ -138,7 +136,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		}
 		
 		@media screen and ( max-width: 1023px ) {
-		 	left: 40px;
+		 //	left: 0;
 	    }
 
 		.owl-next {		
@@ -173,17 +171,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 		
 		.c-details__line {
 			height: 130px;
+			
+			@media screen and ( max-width: 768px ) {
+				height: 70px;
+			}
 		}
 		
 		.c-details__item--wkladka {
 			.c-details__line {
 				height: 275px;
+				
+				@media screen and ( max-width: 768px ) {
+					height: 150px;
+				}
+
 			}
 		}
 		
 		.c-details__item--plotno {
 			.c-details__line {
 				height: 230px;
+				
+				@media screen and ( max-width: 768px ) {
+					height: 180px;
+				}
 			}
 		}
 		

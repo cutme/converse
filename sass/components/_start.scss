@@ -22,9 +22,9 @@
 				position: center;
 			}
 			
-			//@media screen and ( max-height: 767px ) {
-				//height: 440px;
-			//}
+			@media screen and ( max-height: 700px ) {
+				height: 440px;
+			}
 		}
 		
 		@media screen and ( max-width: 768px ) {
