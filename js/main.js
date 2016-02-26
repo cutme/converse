@@ -54,10 +54,12 @@ jQuery(function($) {
 				},
 				afterLoad: function(anchorLink, index) {
 					if (index == 3) {
-						play.fadeOut();
-						cover.fadeOut();
-						$('video').show();
-						$('video').get(0).play();
+						if ( $('html').hasClass('no-mobile') ) {
+							play.fadeOut();
+							cover.fadeOut();
+							$('video').show();
+							$('video').get(0).play();
+						}
 					}
 				},
 				onLeave: function(index, nextIndex, direction){
