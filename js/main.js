@@ -70,9 +70,13 @@ jQuery(function($) {
 		        paddingTop: '50px',
 		        paddingBottom: '50px',
 				responsiveWidth: 760,
-				responsiveHeight: 1024,
+				responsiveHeight: 840,
 		        scrollOverflow: true
 			});
+			
+			if ( $('html').hasClass('mobile') ) {
+				$.fn.fullpage.setAllowScrolling(false);
+			}
 			
 			$('.js-next-section').on('click', function(e) {
 				e.preventDefault();
